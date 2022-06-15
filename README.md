@@ -68,7 +68,8 @@ img=cv2.cvtColor(img,cv2.COLOR_RGB2HSV)<br>
 plt.imshow(img)<br>
 plt.show()<br>
 Output:<br>
-<br>
+![image](https://user-images.githubusercontent.com/99865138/173812933-2a8f212e-5473-4a6e-bd12-b47cf0a29bb4.png)<br>
+![image](https://user-images.githubusercontent.com/99865138/173813006-4abfa48f-75c0-47bc-b974-060d5764e2de.png)<br>
 ************************************************************************************************************************<br>
 Program to display the attributes of image<br>
 
