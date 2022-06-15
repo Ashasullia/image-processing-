@@ -7,6 +7,14 @@ cv2.waitKey(0)<br>
 cv2.destroyAllWindows()<br>
 Output:<br>
 ![image](https://user-images.githubusercontent.com/99865138/173808282-3df0a570-73a7-43bb-99e9-6daa38728069.png)<br>
+coloured image<br>
+import cv2<br>
+img=cv2.imread("butter.jpg",1)<br>
+cv2.imshow("butter",img)<br>
+cv2.waitKey(0)<br>
+cv2.destroyAllWindows()<br>
+Output:<br>
+![image](https://user-images.githubusercontent.com/99865138/173814052-60ce2859-f8df-4b86-b784-f75c9eb92931.png)<br>
 ***********************************************************************************************************************
  Program2:Develop a program to perform linear transformation to rotation<br>
 from PIL import Image<br>
@@ -71,5 +79,20 @@ Output:<br>
 ![image](https://user-images.githubusercontent.com/99865138/173812933-2a8f212e-5473-4a6e-bd12-b47cf0a29bb4.png)<br>
 ![image](https://user-images.githubusercontent.com/99865138/173813006-4abfa48f-75c0-47bc-b974-060d5764e2de.png)<br>
 ************************************************************************************************************************<br>
-Program to display the attributes of image<br>
+Program to display the attributes of image<br>from PIL import Image<br>
+image=Image.open("flower1.jpg")<br>
+print("file name: ",image.filename)<br>
+print("formate: ",image.format)<br>
+print("mode: ",image.mode)
+print("size: ",image.size)<br>
+print("width: ",image.width)<br>
+print("height : ",image.height)<br>
+image.close();<br>
+Output:<br>
+file name:  flower1.jpg<br>
+formate:  JPEG<br>
+mode:  RGB<br>
+size:  (225, 225)<br>
+width:  225<br>
+height :  225<br>
 
