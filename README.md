@@ -25,6 +25,16 @@ cv2.waitKey(0)<br>
 cv2.destroyAllWindows()<br>
 Output:<br>
 ![image](https://user-images.githubusercontent.com/99865138/173809376-9093987f-301d-4d56-99c9-351e7f9733e9.png)<br>
+In rotation 90<br>
+from PIL import Image<br>
+img=Image.open("plant.jpg")<br>
+img=img.rotate(90)<br>
+img.show()<br>
+cv2.waitKey(0)<br>
+cv2.destroyAllWindows()<br>
+Output:<br>
+![image](https://user-images.githubusercontent.com/99865138/173814757-8f91f3fb-52c5-4c18-a381-96477c2169e8.png)<br>
+
 *********************************************************************************************************************
 program3:Develop a program to display image using malplot lib<br>
 import matplotlib.image as mping<br>
