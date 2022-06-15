@@ -1,6 +1,6 @@
 # image-processing-<br>
-program 1: Develop a program to display grayscale image usingread and write operation < br>
-import cv2br>
+program 1: Develop a program to display grayscale image usingread and write operation <br>
+import cv<2br>
 img=cv2.imread("butter.jpg",0)<br>
 cv2.imshow("butter",img)<br>
 cv2.waitKey(0)<br>
