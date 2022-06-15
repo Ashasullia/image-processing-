@@ -62,7 +62,13 @@ img=cv2.imread("flower1.jpg")<br>
 plt.imshow(img)<br>
 plt.show()<br>
 img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)<br>
+plt.imshow(img)<br>
+plt.show()<br>
 img=cv2.cvtColor(img,cv2.COLOR_RGB2HSV)<br>
+plt.imshow(img)<br>
 plt.show()<br>
 Output:<br>
-![image](https://user-images.githubusercontent.com/99865138/173811764-b5d60e4d-0819-4a16-8bbe-e135506ff64f.png)<br>
+<br>
+************************************************************************************************************************<br>
+Program to display the attributes of image<br>
+
