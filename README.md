@@ -105,4 +105,12 @@ mode:  RGB<br>
 size:  (225, 225)<br>
 width:  225<br>
 height :  225<br>
-
+****************************************************************************************************************************************<br>
+Develop a program to readimage using URL.<br>
+from skimage import io<br>
+import matplotlib.pyplot as plt<br>
+url='https://th.bing.com/th/id/OIP.Tr0An6GO1XiVM3am60LKMwHaGC?w=224&h=183&c=7&r=0&o=5&pid=1.7.jpg'<br>
+image=io.imread(url)<br>
+plt.imshow(image)<br>
+plt.show()<br>
+![image](https://user-images.githubusercontent.com/99865138/175005312-c7c1e787-99ac-49ee-a50b-1dee2a729a24.png)<br>
