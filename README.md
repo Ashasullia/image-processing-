@@ -156,6 +156,41 @@ blur=cv2.GaussianBlur(final_result,(7,7),0)<br>
 plt.imshow(blur)<br>
 plt.show()<br>
 ![image](https://user-images.githubusercontent.com/99865138/175017126-edae4b01-edb3-442a-8c0c-4ff18b9bd4be.png)<br>
+**********************************************************************************************************************************<br>
+ Write a program to perform arithmatic operations on images<br>
+import cv2<br>
+import matplotlib.image as mping<br>
+import matplotlib.pyplot as plt<br>
 
+img1=cv2.imread('f2.jpg')<br>
+img2=cv2.imread('f3.jpg')<br>
+
+fimg1=img1+img2<br>
+plt.imshow(fimg1)<br>
+plt.show()<br>
+
+cv2.imwrite('output.jpg',fimg1)<br>
+fimg2=img1-img2<br>
+plt.imshow(fimg2)<br>
+plt.show()<br>
+
+cv2.imwrite('output.jpg',fimg2)<br>
+fimg3=img1*img2<br>
+plt.imshow(fimg3)<br>
+plt.show()<br>
+
+cv2.imwrite('output.jpg',fimg3)<br>
+fimg4=img1/img2<br>
+plt.imshow(fimg4)<br>
+plt.show()<br>
+
+cv2.imwrite('output.jpg',fimg4)<br>
+![image](https://user-images.githubusercontent.com/99865138/175019852-12f8a408-0e21-479e-9c22-0e6654c1969c.png)<br>
+C:\Users\User\AppData\Local\Temp\ipykernel_13152\756045841.py:23: RuntimeWarning: divide by zero encountered in true_divide<br>
+  fimg4=img1/img2<br>
+C:\Users\User\AppData\Local\Temp\ipykernel_13152\756045841.py:23: RuntimeWarning: invalid value encountered in true_divide<br>
+  fimg4=img1/img2
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).<br>
+![image](https://user-images.githubusercontent.com/99865138/175019959-471502be-0249-4d11-a0f8-cc0f19d4ea3a.png)<br>
 
 
