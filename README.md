@@ -191,7 +191,7 @@ C:\Users\User\AppData\Local\Temp\ipykernel_13152\756045841.py:23: RuntimeWarning
 C:\Users\User\AppData\Local\Temp\ipykernel_13152\756045841.py:23: RuntimeWarning: invalid value encountered in true_divide<br>
   fimg4=img1/img2
 Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).<br>
-![image](https://user-images.githubusercontent.com/99865138/175019959-471502be-0249-4d11-a0f8-cc0f19d4ea3a.png)![image](https://user-images.githubusercontent.com/99865138/175268099-565c47a9-7e63-4550-9235-4362715841ea.png)<br>
+![image](https://user-images.githubusercontent.com/99865138/175019959-471502be-0249-4d11-a0f8-cc0f19d4ea3a.png)!<br>
 *****************************************************************************************************************************<br>
 develop the program to change the image to different color space<br>
 import cv2<br> 
@@ -214,5 +214,17 @@ cv2.destoryAllWindows()<br>
 ![image](https://user-images.githubusercontent.com/99865138/175267412-e3462df4-8c27-492f-a973-04849ffddf00.png)<br>
 ![image](https://user-images.githubusercontent.com/99865138/175267525-dd44954b-a3d5-4eba-887b-534c88c8772e.png)<br>
 ![image](https://user-images.githubusercontent.com/99865138/175268077-c617ad0a-8e08-45e8-89a9-dfeb41eab630.png)<br>
-
+********************************************************************************************************************<br>
+Program to develop an image using 2D array<br>
+import cv2 as c<br>
+import numpy as np<br>
+from PIL import Image<br>
+array=np.zeros([100,200,3],dtype=np.uint8)<br>
+array[:,:100]=[255,0,0]<br>
+array[:,100:]=[0,0,255]<br>
+img=Image.fromarray(array)<br>
+img.save('image1.jpg')<br>
+img.show()<br>
+c.waitKey(0)<br>
+![image](https://user-images.githubusercontent.com/99865138/175270940-31b8aa75-07ea-4027-8d2f-6e6c725a1554.png)<br>
 
