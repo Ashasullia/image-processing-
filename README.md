@@ -191,6 +191,28 @@ C:\Users\User\AppData\Local\Temp\ipykernel_13152\756045841.py:23: RuntimeWarning
 C:\Users\User\AppData\Local\Temp\ipykernel_13152\756045841.py:23: RuntimeWarning: invalid value encountered in true_divide<br>
   fimg4=img1/img2
 Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).<br>
-![image](https://user-images.githubusercontent.com/99865138/175019959-471502be-0249-4d11-a0f8-cc0f19d4ea3a.png)<br>
+![image](https://user-images.githubusercontent.com/99865138/175019959-471502be-0249-4d11-a0f8-cc0f19d4ea3a.png)![image](https://user-images.githubusercontent.com/99865138/175268099-565c47a9-7e63-4550-9235-4362715841ea.png)<br>
+*****************************************************************************************************************************<br>
+develop the program to change the image to different color space<br>
+import cv2<br> 
+img=cv2.imread("E:\plant1.jpg")<br>
+gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)<br>
+hsv=cv2.cvtColor(img,cv2.COLOR_BGR2HSV)<br>
+lab=cv2.cvtColor(img,cv2.COLOR_BGR2LAB)<br>
+hls=cv2.cvtColor(img,cv2.COLOR_BGR2HLS)<br>
+yuv=cv2.cvtColor(img,cv2.COLOR_BGR2YUV)<br>
+cv2.imshow("GRAY image",gray)<br>
+cv2.imshow("HSV image",hsv)<br>
+cv2.imshow("LAB image",lab)<br>
+cv2.imshow("HSL image",hls)<br>
+cv2.imshow("YUV image",yuv)<br>
+cv2.waitKey(0)<br>
+cv2.destoryAllWindows()<br>
+![image](https://user-images.githubusercontent.com/99865138/175267198-cc80280e-bed0-4b5a-83ee-2af9f9ddf769.png)<br>
+
+![image](https://user-images.githubusercontent.com/99865138/175267265-505b8f03-f93a-43f2-a2d6-c8dcc42d1959.png)<br>
+![image](https://user-images.githubusercontent.com/99865138/175267412-e3462df4-8c27-492f-a973-04849ffddf00.png)<br>
+![image](https://user-images.githubusercontent.com/99865138/175267525-dd44954b-a3d5-4eba-887b-534c88c8772e.png)<br>
+![image](https://user-images.githubusercontent.com/99865138/175268077-c617ad0a-8e08-45e8-89a9-dfeb41eab630.png)<br>
 
 
