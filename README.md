@@ -118,6 +118,24 @@ print("resized  image length and width",imgresize.shape)<br>
 cv2.waitKey(0)<br>
 ![image](https://user-images.githubusercontent.com/99865138/175275336-5073426e-55fa-4549-b527-b0b2c74e993f.png)<br>
 ***************************************************************************************************************************<br>
+convert the original image to gray scale and then to display binary<br>
+import cv2<br>
+img=cv2.imread('flower1.jpg')<br>
+cv2.imshow("RGB",img)<br>
+cv2.waitKey(0)<br>
+
+img=cv2.imread('flower1.jpg')<br>
+cv2.imshow("Gray",img)<br>
+cv2.waitKey(0)<br>
+
+ret,bw_ing=cv2.threshold(img,127,255,cv2.THRESH_BINARY)<br>
+
+cv2.imshow("binary",bw_ing)<br>
+cv2.waitKey(0)<br>
+cv2.destroyAllWindows()
+![image](https://user-images.githubusercontent.com/99865138/175283628-61397272-a5f7-45c1-a78b-024d302a0715.png)<br>
+![image](https://user-images.githubusercontent.com/99865138/175283686-568894c3-a98b-46e0-9a07-b31d4a2c7553.png)<br>
+![image](https://user-images.githubusercontent.com/99865138/175283735-0af573a1-cf68-4269-9e2b-a8a34f5d2404.png)<br>
 
 ****************************************************************************************************************************************<br>
 Develop a program to readimage using URL.<br>
