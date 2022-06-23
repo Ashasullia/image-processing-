@@ -89,7 +89,7 @@ Output:<br>
 ![image](https://user-images.githubusercontent.com/99865138/173812933-2a8f212e-5473-4a6e-bd12-b47cf0a29bb4.png)<br>
 ![image](https://user-images.githubusercontent.com/99865138/173813006-4abfa48f-75c0-47bc-b974-060d5764e2de.png)<br>
 ************************************************************************************************************************<br>
-Program to display the attributes of image<br>from PIL import Image<br>
+Program7: to display the attributes of image<br>from PIL import Image<br>
 image=Image.open("flower1.jpg")<br>
 print("file name: ",image.filename)<br>
 print("formate: ",image.format)<br>
@@ -106,7 +106,7 @@ size:  (225, 225)<br>
 width:  225<br>
 height :  225<br>
 ************************************************************************************************************************************<br>
-resize the original image<br>
+program 8:resize the original image<br>
 import cv2 <br>
 img=cv2.imread("flower.jpg")<br>
 print("original image length and width",img.shape)<br>
@@ -118,7 +118,7 @@ print("resized  image length and width",imgresize.shape)<br>
 cv2.waitKey(0)<br>
 ![image](https://user-images.githubusercontent.com/99865138/175275336-5073426e-55fa-4549-b527-b0b2c74e993f.png)<br>
 ***************************************************************************************************************************<br>
-convert the original image to gray scale and then to display binary<br>
+program 9:convert the original image to gray scale and then to display binary<br>
 import cv2<br>
 img=cv2.imread('flower1.jpg')<br>
 cv2.imshow("RGB",img)<br>
@@ -132,13 +132,13 @@ ret,bw_ing=cv2.threshold(img,127,255,cv2.THRESH_BINARY)<br>
 
 cv2.imshow("binary",bw_ing)<br>
 cv2.waitKey(0)<br>
-cv2.destroyAllWindows()
+cv2.destroyAllWindows()<br>
 ![image](https://user-images.githubusercontent.com/99865138/175283628-61397272-a5f7-45c1-a78b-024d302a0715.png)<br>
 ![image](https://user-images.githubusercontent.com/99865138/175283686-568894c3-a98b-46e0-9a07-b31d4a2c7553.png)<br>
 ![image](https://user-images.githubusercontent.com/99865138/175283735-0af573a1-cf68-4269-9e2b-a8a34f5d2404.png)<br>
 
 ****************************************************************************************************************************************<br>
-Develop a program to readimage using URL.<br>
+program 10: Develop a program to readimage using URL.<br>
 from skimage import io<br>
 import matplotlib.pyplot as plt<br>
 url='https://th.bing.com/th/id/OIP.Tr0An6GO1XiVM3am60LKMwHaGC?w=224&h=183&c=7&r=0&o=5&pid=1.7.jpg'<br>
@@ -147,7 +147,7 @@ plt.imshow(image)<br>
 plt.show()<br>
 ![image](https://user-images.githubusercontent.com/99865138/175005312-c7c1e787-99ac-49ee-a50b-1dee2a729a24.png)<br>
 ******************************************************************************************************************************<br>
- Write a program to perform arithmatic operations on images<br>
+program 11 :Write a program to perform arithmatic operations on images<br>
  import cv2<br>
 import matplotlib.image as mping<br>
 import matplotlib.pyplot as plt<br>
@@ -189,7 +189,7 @@ plt.imshow(blur)<br>
 plt.show()<br>
 ![image](https://user-images.githubusercontent.com/99865138/175017126-edae4b01-edb3-442a-8c0c-4ff18b9bd4be.png)<br>
 **********************************************************************************************************************************<br>
- Write a program to perform arithmatic operations on images<br>
+program 12: Write a program to perform arithmatic operations on images<br>
 import cv2<br>
 import matplotlib.image as mping<br>
 import matplotlib.pyplot as plt<br>
@@ -225,7 +225,7 @@ C:\Users\User\AppData\Local\Temp\ipykernel_13152\756045841.py:23: RuntimeWarning
 Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).<br>
 ![image](https://user-images.githubusercontent.com/99865138/175019959-471502be-0249-4d11-a0f8-cc0f19d4ea3a.png)!<br>
 *****************************************************************************************************************************<br>
-develop the program to change the image to different color space<br>
+program 13: develop the program to change the image to different color space<br>
 import cv2<br> 
 img=cv2.imread("E:\plant1.jpg")<br>
 gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)<br>
@@ -247,7 +247,7 @@ cv2.destoryAllWindows()<br>
 ![image](https://user-images.githubusercontent.com/99865138/175267525-dd44954b-a3d5-4eba-887b-534c88c8772e.png)<br>
 ![image](https://user-images.githubusercontent.com/99865138/175268077-c617ad0a-8e08-45e8-89a9-dfeb41eab630.png)<br>
 ********************************************************************************************************************<br>
-Program to develop an image using 2D array<br>
+Program  14:to develop an image using 2D array<br>
 import cv2 as c<br>
 import numpy as np<br>
 from PIL import Image<br>
