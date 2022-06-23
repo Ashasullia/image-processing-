@@ -105,6 +105,20 @@ mode:  RGB<br>
 size:  (225, 225)<br>
 width:  225<br>
 height :  225<br>
+************************************************************************************************************************************<br>
+resize the original image<br>
+import cv2 <br>
+img=cv2.imread("flower.jpg")<br>
+print("original image length and width",img.shape)<br>
+cv2.imshow("original image",img)<br>
+cv2.waitKey(0)<br>
+imgresize=cv2.resize(img,(150,150))<br>
+cv2.imshow("resized image",imgresize)<br>
+print("resized  image length and width",imgresize.shape)<br>
+cv2.waitKey(0)<br>
+![image](https://user-images.githubusercontent.com/99865138/175275336-5073426e-55fa-4549-b527-b0b2c74e993f.png)<br>
+***************************************************************************************************************************<br>
+
 ****************************************************************************************************************************************<br>
 Develop a program to readimage using URL.<br>
 from skimage import io<br>
