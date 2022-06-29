@@ -259,4 +259,52 @@ img.save('image1.jpg')<br>
 img.show()<br>
 c.waitKey(0)<br>
 ![image](https://user-images.githubusercontent.com/99865138/175270940-31b8aa75-07ea-4027-8d2f-6e6c725a1554.png)<br>
-
+****************************************************************************************************************************<br>
+program 15:develope an image using bitwise operation<br>
+************************************************************************************************************************<br>
+import cv2<br>
+import matplotlib.pyplot as plt<br>
+image1=cv2.imread("b1.jpg",1)<br>
+image2=cv2.imread("b1.jpg")<br>
+ax=plt.subplots(figsize=(15,10))<br>
+bitwiseAnd=cv2.bitwise_and(image1,image2)<br>
+bitwiseOr=cv2.bitwise_or(image1,image2)<br>
+bitwiseXor=cv2.bitwise_xor(image1,image2)<br>
+bitwiseNot_img1=cv2.bitwise_not(image1)<br>
+bitwiseNot_img2=cv2.bitwise_not(image2)<br>
+plt.subplot(151)<br>
+plt.imshow(bitwiseAnd)<br>
+plt.subplot(152)<br>
+plt.imshow(bitwiseOr)<br>
+plt.subplot(153)<br>
+plt.imshow(bitwiseXor)<br>
+plt.subplot(154)<br>
+plt.imshow(bitwiseNot_img1)<br>
+plt.subplot(155)<br>
+plt.imshow(bitwiseNot_img2)<br>
+cv2.waitKey(0)<br>
+![image](https://user-images.githubusercontent.com/99865138/176406989-3a61812a-5614-442d-aa1f-4112ff75f2f1.png)<br>
+*also using different image<br>
+import cv2<br>
+import matplotlib.pyplot as plt<br>
+image1=cv2.imread("a1.jpg",1)<br>
+image2=cv2.imread("s1.jpg")<br>
+ax=plt.subplots(figsize=(15,10))<br>
+bitwiseAnd=cv2.bitwise_and(image1,image2)<br>
+bitwiseOr=cv2.bitwise_or(image1,image2)<br>
+bitwiseXor=cv2.bitwise_xor(image1,image2)<br>
+bitwiseNot_img1=cv2.bitwise_not(image1)<br>
+bitwiseNot_img2=cv2.bitwise_not(image2)<br>
+plt.subplot(151)<br>
+plt.imshow(bitwiseAnd)<br>
+plt.subplot(152)<br>
+plt.imshow(bitwiseOr)<br>
+plt.subplot(153)<br>
+plt.imshow(bitwiseXor)<br>
+plt.subplot(154)<br>
+plt.imshow(bitwiseNot_img1)<br>
+plt.subplot(155)<br>
+plt.imshow(bitwiseNot_img2)<br>
+cv2.waitKey(0)<br>
+![image](https://user-images.githubusercontent.com/99865138/176407181-bcadef59-3a60-42e2-8e38-6d0f45dec2f6.png)<br>
+**********************************************************************************************************<br>
