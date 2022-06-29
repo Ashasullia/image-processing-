@@ -308,3 +308,31 @@ plt.imshow(bitwiseNot_img2)<br>
 cv2.waitKey(0)<br>
 ![image](https://user-images.githubusercontent.com/99865138/176407181-bcadef59-3a60-42e2-8e38-6d0f45dec2f6.png)<br>
 **********************************************************************************************************<br>
+program 16: develop an image using blurring<br>
+import cv2<br>
+import numpy as np<br>
+
+image=cv2.imread("a1.jpg")<br>
+cv2.imshow("original image",image)<br>
+cv2.waitKey(0)<br>
+
+Gaussian=cv2.GaussianBlur(image,(7,7),0)<br>
+cv2.imshow("Gaussian blurring",Gaussian)<br>
+cv2.waitKey(0)<br>
+
+median=cv2.medianBlur(image,5)<br>
+cv2.imshow("median blurring",median)<br>
+cv2.waitKey(0)<br>
+
+
+bilateral=cv2.bilateralFilter(image,9,75,75)<br>
+cv2.imshow("bilateral blurring",bilateral)<br>
+cv2.waitKey(0)<br>
+cv2.destroyAllWindows()<br>
+![image](https://user-images.githubusercontent.com/99865138/176414252-06734e0c-8c1a-4528-bf16-03a259d9bdf2.png)<br>
+![image](https://user-images.githubusercontent.com/99865138/176414332-162fdeea-1fbb-42ee-ab1f-bed2942b8741.png)<br>
+![image](https://user-images.githubusercontent.com/99865138/176414471-aab79085-7873-44e5-896a-d323d703bd34.png)<br>
+![image](https://user-images.githubusercontent.com/99865138/176414610-664f83ee-1a37-49fd-a9ec-3f6231bb1354.png)<br>
+*****************************************************************************************************************<br>
+
+
