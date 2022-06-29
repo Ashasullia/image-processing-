@@ -334,5 +334,41 @@ cv2.destroyAllWindows()<br>
 ![image](https://user-images.githubusercontent.com/99865138/176414471-aab79085-7873-44e5-896a-d323d703bd34.png)<br>
 ![image](https://user-images.githubusercontent.com/99865138/176414610-664f83ee-1a37-49fd-a9ec-3f6231bb1354.png)<br>
 *****************************************************************************************************************<br>
+program 17 : develop an image using enhancement method<br>
+from PIL import Image<br>
+from PIL import ImageEnhance<br>
+image=Image.open("a2.jpg")<br>
+image.show()<br>
+
+enh_bri=ImageEnhance.Brightness(image)<br>
+brightness=1.5<br>
+image_brightened=enh_bri.enhance(brightness)<br>
+image_brightened.show()<br>
+
+enh_col=ImageEnhance.Color(image)<br>
+color=1.5<br>
+image_colored=enh_col.enhance(color)<br>
+image_colored.show()<br>
+
+enh_con=ImageEnhance.Contrast(image)<br>
+contrast=1.5<br>
+image_contrasted=enh_col.enhance(contrast)<br>
+image_contrasted.show()<br>
+
+enh_sha=ImageEnhance.Sharpness(image)<br>
+sharpness=1.5<br>
+image_sharped=enh_col.enhance(sharpness)<br>
+image_sharped.show()<br>
+![image](https://user-images.githubusercontent.com/99865138/176423251-b1a20be8-333f-4927-a7d8-24840bc3ff17.png)<br>
+![image](https://user-images.githubusercontent.com/99865138/176423295-3f6364ad-6a65-4105-9189-921c0bb80669.png)<br>
+![image](https://user-images.githubusercontent.com/99865138/176423352-c4ea6adf-c0fd-4cd2-89a7-6c78c7345869.png)<br>
+![image](https://user-images.githubusercontent.com/99865138/176423409-84cee290-707e-4f20-ad42-9b5791c055f2.png)<br>
+![image](https://user-images.githubusercontent.com/99865138/176423620-66485e60-b39f-4a7f-a213-4ab3127827bf.png)<br>
+
+
+
+
+
+
 
 
