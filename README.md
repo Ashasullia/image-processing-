@@ -411,6 +411,8 @@ if isSaved:<br>
 ![image](https://user-images.githubusercontent.com/99865138/178702083-4cdf01bc-503f-4d11-9629-a10b2fd6c636.png)<br>
 ![image](https://user-images.githubusercontent.com/99865138/178702163-f968d5ee-62aa-4fa8-9c46-8276a659b2cc.png)<br>
 ![image](https://user-images.githubusercontent.com/99865138/178705660-ce9db1c4-c914-4c2b-9d6a-52b8c2d35df2.png)<br>
+the image is succesfully saved.<br>
+
 ***************************************************************************************************************<br>
 slicing with back ground<br>
 
