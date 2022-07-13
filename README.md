@@ -389,9 +389,28 @@ plt.subplot(155)<br>
 plt.imshow(gradient)<br>
 cv2.waitKey(0)<br>
 ![image](https://user-images.githubusercontent.com/99865138/176427055-e1313b06-e76b-4f17-aa7d-e14a5086c00f.png)<br>
+****************************************************************************************************************
+1.      Develop a program to<br>
+(i)                Read the image, convert it into grayscale image<br>
+(ii)              write (save) the grayscale image and<br>
+(iii)            display the original image and grayscale image<br>
 
-
-
+ (Note: To save image to local storage using Python, we use cv2.imwrite() function on OpenCV library )<br>
+ 
+ 
+import cv2<br>
+OriginalImg=cv2.imread('b6.jpg')<br>
+GrayImg=cv2.imread('b6.jpg',0)<br>
+isSaved=cv2.imwrite('D:\b6.jpg',GrayImg)<br>
+cv2.imshow("display Original Image",OriginalImg)<br>
+cv2.imshow("display Grayscale Image",GrayImg)<br>
+cv2.waitKey(0)<br>
+cv2.destroyAllWindows()<br>
+if isSaved:<br>
+    print("the image is succesfully saved.")<br>
+![image](https://user-images.githubusercontent.com/99865138/178702083-4cdf01bc-503f-4d11-9629-a10b2fd6c636.png)<br>
+![image](https://user-images.githubusercontent.com/99865138/178702163-f968d5ee-62aa-4fa8-9c46-8276a659b2cc.png)<br>
+![image](https://user-images.githubusercontent.com/99865138/178705660-ce9db1c4-c914-4c2b-9d6a-52b8c2d35df2.png)<br>
 
 
 
