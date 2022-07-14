@@ -511,5 +511,19 @@ plt.show()<br>
 ![image](https://user-images.githubusercontent.com/99865138/178960961-8754d422-ab65-4867-a7d4-4f64ed91bb6e.png)<br>
 
 *********************************************************************************************************************************<br>
-
+from skimage import io<br>
+import matplotlib.pyplot as plt<br>
+image = io.imread('b7.jpg')<br>
+plt.imshow(img)<br>
+plt.show()<br>
+_ = plt.hist(image.ravel(), bins = 256, color = 'orange', )<br>
+_ = plt.hist(image[:, :, 0].ravel(), bins = 256, color = 'red', alpha = 0.5)<br>
+_ = plt.hist(image[:, :, 1].ravel(), bins = 256, color = 'Green', alpha = 0.5)<br>
+_ = plt.hist(image[:, :, 2].ravel(), bins = 256, color = 'Blue', alpha = 0.5)<br>
+_ = plt.xlabel('Intensity Value')<br>
+_ = plt.ylabel('Count')<br>
+_ = plt.legend(['Total', 'Red_Channel', 'Green_Channel', 'Blue_Channel'])<br>
+plt.show()<br>
+![image](https://user-images.githubusercontent.com/99865138/178968127-aad7a80e-d578-40bd-8efa-b0bfbf45ca89.png)<br>
+**************************************************************************************************************<br>
 
