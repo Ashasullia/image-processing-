@@ -364,7 +364,8 @@ image_sharped.show()<br>
 ![image](https://user-images.githubusercontent.com/99865138/176423352-c4ea6adf-c0fd-4cd2-89a7-6c78c7345869.png)<br>
 ![image](https://user-images.githubusercontent.com/99865138/176423409-84cee290-707e-4f20-ad42-9b5791c055f2.png)<br>
 ![image](https://user-images.githubusercontent.com/99865138/176423620-66485e60-b39f-4a7f-a213-4ab3127827bf.png)<br>
-******************************************************************************************************************
+******************************************************************************************************************<br>
+program 18:<br>
 import cv2<br>
 import numpy as np<br>
 from matplotlib import pyplot as plt<br>
@@ -390,7 +391,7 @@ plt.imshow(gradient)<br>
 cv2.waitKey(0)<br>
 ![image](https://user-images.githubusercontent.com/99865138/176427055-e1313b06-e76b-4f17-aa7d-e14a5086c00f.png)<br>
 ****************************************************************************************************************
-1.      Develop a program to<br>
+ 19:  1.      Develop a program to<br>
 (i)                Read the image, convert it into grayscale image<br>
 (ii)              write (save) the grayscale image and<br>
 (iii)            display the original image and grayscale image<br>
@@ -414,6 +415,7 @@ if isSaved:<br>
 the image is succesfully saved.<br>
 
 ***************************************************************************************************************<br>
+program 20:<br>
 slicing with back ground<br>
 
 
@@ -437,7 +439,7 @@ plt.show() <br>
 ![image](https://user-images.githubusercontent.com/99865138/178707197-cb178bb9-b853-4567-85e0-eaf768a0b4f9.png)<br>
 
 **************************************************************************************************************<br>
-slicing with out background<br>
+program 21 :slicing with out background<br>
 
 import cv2<br>
 import numpy as np<br>
@@ -458,6 +460,7 @@ plt.show() <br>
             
 ![image](https://user-images.githubusercontent.com/99865138/178707925-d60a52ca-4461-4e2d-810b-f395ec42dfad.png)<br>
 *************************************************************************************************************<br>
+program 22 :<br>
 using histogram<br><br><br> 
 using variable library <br><br><br>
 
@@ -471,7 +474,8 @@ plt.show() <br><br><br>
 ![image](https://user-images.githubusercontent.com/99865138/178960723-ca7c2937-1354-48c1-b486-a57df21d5c7e.png)<br><br><br>
 
 
-*********************************************************************************************************************<br><br>
+*********************************************************************************************************************<br>
+program 23:<br>
 from matplotlib import pyplot as plt<br><br>
 import numpy as np<br><br>
 fig,ax = plt.subplots(1,1)<br><br>
@@ -485,7 +489,8 @@ plt.show()<br><br>
 
 ![image](https://user-images.githubusercontent.com/99865138/178960830-6380e45d-3784-412b-a833-ecd99d215fbb.png)<br><br>
 
-*************************************************************************************************************************<br><br>
+*************************************************************************************************************************<br>
+program 24 :<br>
 import numpy as np<br><br>
 import cv2 as cv<br><br>
 from matplotlib import pyplot as plt<br><br>
@@ -499,6 +504,7 @@ plt.show()<br><br>
 
 
 ****************************************************************************************************************************<br>
+program 25 :<br>
 from skimage import io<br>
 import matplotlib.pyplot as plt<br>
 img = io.imread('b6.jpg')<br>
@@ -511,6 +517,7 @@ plt.show()<br>
 ![image](https://user-images.githubusercontent.com/99865138/178960961-8754d422-ab65-4867-a7d4-4f64ed91bb6e.png)<br>
 
 *********************************************************************************************************************************<br>
+program 25 :<br>
 from skimage import io<br>
 import matplotlib.pyplot as plt<br>
 image = io.imread('b7.jpg')<br>
