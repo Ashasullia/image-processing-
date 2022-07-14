@@ -458,5 +458,58 @@ plt.show() <br>
             
 ![image](https://user-images.githubusercontent.com/99865138/178707925-d60a52ca-4461-4e2d-810b-f395ec42dfad.png)<br>
 *************************************************************************************************************<br>
+using histogram<br><br><br> 
+using variable library <br><br><br>
+
+import matplotlib.pyplot as plt<br><br><br>
+import numpy as np<br><br><br>
+
+x = np.random.normal(170, 10, 250)<br><br><br>
+
+plt.hist(x)<br><br><br>
+plt.show() <br><br><br>
+![image](https://user-images.githubusercontent.com/99865138/178960723-ca7c2937-1354-48c1-b486-a57df21d5c7e.png)<br><br><br>
+
+
+*********************************************************************************************************************<br><br>
+from matplotlib import pyplot as plt<br><br>
+import numpy as np<br><br>
+fig,ax = plt.subplots(1,1)<br><br>
+a = np.array([22,87,5,43,56,73,55,54,11,20,51,5,79,31,27])<br><br>
+ax.hist(a, bins = [0,25,50,75,100])<br><br>
+ax.set_title("histogram of result")<br><br>
+ax.set_xticks([0,25,50,75,100])<br><br>
+ax.set_xlabel('marks')<br><br>
+ax.set_ylabel('no. of students')<br><br>
+plt.show()<br><br>
+
+![image](https://user-images.githubusercontent.com/99865138/178960830-6380e45d-3784-412b-a833-ecd99d215fbb.png)<br><br>
+
+*************************************************************************************************************************<br><br>
+import numpy as np<br><br>
+import cv2 as cv<br><br>
+from matplotlib import pyplot as plt<br><br>
+img = cv.imread('b7.jpg')<br><br>
+plt.imshow(img)<br><br>
+plt.show()<br><br>
+img = cv.imread('b7.jpg',0)<br><br>
+plt.hist(img.ravel(),256,[0,256]);<br><br>
+plt.show()<br><br>
+![image](https://user-images.githubusercontent.com/99865138/178960892-a8401061-5d6b-42a6-9110-ecd935468f27.png)<br><br>
+
+
+****************************************************************************************************************************<br>
+from skimage import io<br>
+import matplotlib.pyplot as plt<br>
+img = io.imread('b6.jpg')<br>
+plt.imshow(img)<br>
+plt.show()<br>
+image = io.imread('b6.jpg')<br>
+ax = plt.hist(image.ravel(), bins = 256)<br>
+plt.show()<br>
+
+![image](https://user-images.githubusercontent.com/99865138/178960961-8754d422-ab65-4867-a7d4-4f64ed91bb6e.png)<br>
+
+*********************************************************************************************************************************<br>
 
 
