@@ -629,13 +629,17 @@ plt.show()<br>
 from PIL import Image<br>
 import matplotlib.pyplot as plt<br>
 im=Image.open('a1.jpg')<br>
+plt.imshow(image)<br>
+plt.show()<br>
+
 width,height=im.size<br>
-im1=im.crop((80,100,300,200))<br>
+im1=im.crop((50,0,150,125))<br>
+
 
 im1.show()<br>
 plt.imshow(im1)<br>
 plt.show()<br>
 
-![image](https://user-images.githubusercontent.com/99865138/179962931-d2f2d05d-b530-4d40-8f7f-9b8b7900c933.png)<br>
+![image](https://user-images.githubusercontent.com/99865138/179966759-8d8a25d6-79e3-4ef3-b7b9-42865874f993.png)<br>
 
 
