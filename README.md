@@ -641,5 +641,282 @@ plt.imshow(im1)<br>
 plt.show()<br>
 
 ![image](https://user-images.githubusercontent.com/99865138/179966759-8d8a25d6-79e3-4ef3-b7b9-42865874f993.png)<br>
+***************************************************************************************************************************************<br> 
+matrix<br>
+**************************************************************************************************************************<br>
+from PIL import Image<br>
+from numpy import array<br>
+im_1 = Image.open(r"a1.jpg")<br>
+ar = array(im_1)<br>
+ar<br>
 
+array([[[233, 224, 215],<br>
+        [233, 224, 215],<br>
+        [233, 224, 215],<br>
+        ...,<br>
+        [219, 211, 200],<br>
+        [219, 211, 200],<br>
+        [219, 211, 200]],<br>
+<br>
+       [[230, 221, 212],<br>
+        [230, 221, 212],<br>
+        [230, 221, 212],<br>
+        ...,<br>
+        [219, 211, 200],<br>
+        [219, 211, 200],<br>
+        [219, 211, 200]],<br>
+
+       [[229, 220, 211],<br>
+        [229, 220, 211],<br>
+        [229, 220, 211],<br>
+        ...,<br>
+        [218, 210, 199],<br>
+        [218, 210, 199],<br>
+        [218, 210, 199]],<br>
+
+       ...,<br>
+
+       [[243, 244, 249],<br>
+        [243, 244, 249],<br>
+        [243, 244, 249],<br>
+        ...,<br>
+        [239, 239, 239],<br>
+        [239, 239, 239],<br>
+        [239, 239, 239]],<br>
+
+       [[243, 244, 249],<br>
+        [243, 244, 249],<br>
+        [243, 244, 249],<br>
+        ...,<br>
+        [239, 239, 239],<br>
+        [239, 239, 239],<br>
+        [239, 239, 239]],<br>
+
+       [[244, 243, 249],<br>
+        [244, 243, 249],<br>
+        [244, 243, 249],<br>
+        ...,<br>
+        [239, 238, 243],<br>
+        [239, 238, 243],<br>
+        [241, 240, 245]]],<br> dtype=uint8)<br>
+import matplotlib.pyplot as plt <br>
+import matplotlib.pyplot as plt <br>
+from skimage import io<br>
+img=io.imread('b7.jpg')<br>
+plt.imshow(img)<br>
+plt.show()<br>
+print('The Shape of the image is:',img. shape)<br>
+print('The image as array is:')<br>
+print(img)<br>
+
+![image](https://user-images.githubusercontent.com/99865138/180202208-7699f5cb-c328-4f84-8cb9-f0736c958ebd.png)<br>
+
+
+The Shape of the image is: (183, 275, 3)<br>
+The image as array is:<br>
+[[[13 14 19]<br>
+  [13 14 19]<br>
+  [13 14 19]<br>
+  ...<br>
+  [27 32 10]<br>
+  [27 32 10]
+  [27 32 10]]<br>
+ [[13 14 19]<br>
+  [13 14 19]
+  [13 14 19]<br>
+  ...<br>
+  [29 34 12]<br>
+  [29 34 12]<br>
+  [29 34 12]]<br>
+
+ [[14 15 20]<br>
+  [14 15 20]<br>
+  [14 15 20]<br>
+  ...<br>
+  [34 39 17]<br>
+  [34 39 17]<br>
+  [34 39 17]]<br>
+
+ ...<br>
+
+ [[39 44 22]<br>
+  [43 48 26]<br>
+  [41 46 26]<br>
+  ...<br>
+  [71 71 71]<br>
+  [75 75 75]<br>
+  [81 81 81]]<br>
+
+ [[38 43 21]<br>
+  [43 48 26]<br>
+  [41 46 26]<br>
+  ...<br>
+  [78 78 78]<br>
+  [80 80 80]<br>
+  [83 83 83]]<br>
+
+ [[38 43 21]<br>
+  [43 48 26]<br>
+  [40 45 25]<br>
+  ...<br>
+  [85 85 85]<br>
+  [84 84 84]<br>
+  [82 82 82]]]<br>
+from PIL import Image<br>
+  
+# Import an image from directory:<br>
+input_image = Image.open("a1.jpg")<br>
+  
+# Extracting pixel map:<br>
+pixel_map = input_image.load()<br>
+  
+# Extracting the width and height <br>
+# of the image:<br>
+width, height = input_image.size<br>
+  
+# taking half of the width:<br>
+for i in range(width//2):<br>
+    for j in range(height):<br>
+        
+        # getting the RGB pixel value.<br>
+        r, g, b = input_image.getpixel((i, j))<br>
+          
+        # Apply formula of grayscale:<br>
+        grayscale = (0.299*r + 0.587*g + 0.114*b)<br>
+  
+        # setting the pixel value.<br>
+        pixel_map[i, j] = (int(grayscale), int(grayscale), int(grayscale))<br>
+  
+# Saving the final output<br>
+# as "grayscale.png":<br>
+#input_image.save("grayscale", format="png")<br>
+plt.imshow(input_image)<br>
+plt.show()   <br> 
+# use input_image.show() to see the image on the<br>
+# output screen.<br>
+
+![image](https://user-images.githubusercontent.com/99865138/180202299-61bf4dd2-373f-4dda-b2e9-f105d2f39d0b.png)<br>
+<br>
+from PIL import Image<br>
+from PIL import Image<br>
+import matplotlib.pyplot as plt<br>  <br>
+# Create an image as input:<br>
+input_image = Image.new(mode="RGB", size=(400, 400),<br>
+                        color="blue")<br>
+  
+# save the image as "input.png"<br>
+#(not mandatory)<br>
+#input_image.save("input", format="png")<br>
+  
+# Extracting pixel map:<br><br>
+pixel_map = input_image.load()<br><br>
+  
+# Extracting the width and height<br><br>
+# of the image:<br><br>
+width, height = input_image.size<br><br>
+z = 100<br><br>
+for i in range(width):<br><br>
+    for j in range(height):<br><br>
+        
+        # the following if part will create<br><br>
+        # a square with color orange<br><br>
+        if((i >= z and i <= width-z) and (j >= z and j <= height-z)):<br><br>
+            
+            # RGB value of orange.<br><br>
+            pixel_map[i, j] = (255, 165, 255)<br><br>
+  
+        # the following else part will fill the<br><br>
+        # rest part with color light salmon.<br><br>
+        else:<br><br>
+            
+            # RGB value of light salmon.<br><br>
+            pixel_map[i, j] = (255, 160, 122)<br><br>
+  
+# The following loop will create a cross<br><br>
+# of color blue.<br><br>
+for i in range(width):<br><br>
+    
+    # RGB value of Blue.<br><br>
+    pixel_map[i, i] = (255, 0, 255)<br><br>
+    pixel_map[i, width-i-1] = (0, 255, 255)<br><br>
+  
+# Saving the final output<br><br>
+# as "output.png":<br><br>
+#input_image.save("output", format="png")<br>
+plt.imshow(input_image)<br>
+plt.show() <br> 
+# use input_image.show() to see the image on the<br>
+# output screen.<br>
+![image](https://user-images.githubusercontent.com/99865138/180202373-8aa623ed-e380-4321-a757-fbdc4d6f2d7c.png)<br>
+<br>
+import numpy as np<br>
+import matplotlib.pyplot as plt   <br>
+imgsize=(650,650)<br>
+image = Image.new('RGBA', imgsize)<br>
+innerColor = [153,0,0]<br>
+for y in range(imgsize[1]):<br>
+    for x in range(imgsize[0]):<br>
+         distanceToCenter =np.sqrt((x - imgsize[0]/2) ** 2 + (y - imgsize[1]/2) ** 2)<br>
+         distanceToCenter = (distanceToCenter) / (np.sqrt(2) * imgsize[0]/2)<br>
+         r = distanceToCenter + innerColor[0] * (1 - distanceToCenter)<br>
+         g =  distanceToCenter + innerColor[1] * (1 - distanceToCenter)<br>
+         b =  distanceToCenter + innerColor[2] * (1 - distanceToCenter)<br>
+         image.putpixel((x, y), (int(r), int(g), int(b)))
+        <br>
+plt.imshow(image)<br>
+plt.show()  <br>
+
+![image](https://user-images.githubusercontent.com/99865138/180202480-c87834c6-60c3-4dfe-8858-3eedeed322fa.png)<br>
+<br>
+import numpy as np<br>
+import matplotlib.pyplot as plt <br>  
+imgsize=(650,650)<br>
+image = Image.new('RGBA', imgsize)<br>
+innerColor = [153,0,0]<br>
+for y in range(imgsize[1]):<br>
+    for x in range(imgsize[0]):<br>
+         distanceToCenter =np.sqrt((x - imgsize[0]/2) ** 2 + (y - imgsize[1]/2) ** 2)<br>
+         distanceToCenter = (distanceToCenter) / (np.sqrt(2) * imgsize[0]/2)<br>
+         r = distanceToCenter + innerColor[0] * (1 - distanceToCenter)<br>
+         g =  distanceToCenter + innerColor[1] * (1 - distanceToCenter)<br>
+         b =  distanceToCenter + innerColor[2] * (1 - distanceToCenter)<br>
+         image.putpixel((x, y), (int(r), int(g), int(b)))<br>
+        
+plt.imshow(image)<br>
+plt.show()  <br>
+<br>
+plt.imshow(image)<br>
+plt.show()  <br>
+import numpy as np<br>
+import matplotlib.pyplot as plt   <br>
+imgsize=(650,650)<br>
+image = Image.new('RGBA', imgsize)<br>
+innerColor = [255,0,0]<br>
+for y in range(imgsize[1]):<br>
+    for x in range(imgsize[0]):<br>
+         distanceToCenter =np.sqrt((x - imgsize[0]/2) ** 2 + (y - imgsize[1]/2) ** 2)<br>
+         distanceToCenter = (distanceToCenter) / (np.sqrt(2) * imgsize[0]/2)<br>
+         r = distanceToCenter + innerColor[0] * (1 - distanceToCenter)<br>
+         g =  distanceToCenter + innerColor[1] * (1 - distanceToCenter)<br>
+         b =  distanceToCenter + innerColor[2] * (1 - distanceToCenter)<br>
+         image.putpixel((x, y), (int(r), int(g), int(b)))
+        
+plt.imshow(image)<br>
+plt.show() <br> 
+
+512<br>
+from PIL import Image<br>
+import matplotlib.pyplot as plt<br>  
+import numpy as np<br>
+w, h = 512,512<br>
+data = np.zeros((h, w, 3), dtype=np.uint8)<br>
+data[0:256, 0:256] = [255, 0, 0] <br>
+data[256:300,256:300] = [120,200,255] <br>
+# red patch in upper left<br>
+img = Image.fromarray(data, 'RGB')<br>
+#img.save('my.png')<br>
+#img.show()<br>
+plt.imshow(img)<br>
+plt.show()<br> <br>
+![image](https://user-images.githubusercontent.com/99865138/180202088-5e6410c8-7019-44d9-bd9d-5008d8c0e258.png)<br>
 
