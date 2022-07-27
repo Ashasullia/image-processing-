@@ -764,35 +764,35 @@ The image as array is:<br>
   [82 82 82]]]<br>
 from PIL import Image<br>
   
-# Import an image from directory:<br>
+Import an image from directory:<br>
 input_image = Image.open("a1.jpg")<br>
   
-# Extracting pixel map:<br>
+Extracting pixel map:<br>
 pixel_map = input_image.load()<br>
   
-# Extracting the width and height <br>
-# of the image:<br>
+Extracting the width and height <br>
+of the image:<br>
 width, height = input_image.size<br>
   
-# taking half of the width:<br>
+taking half of the width:<br>
 for i in range(width//2):<br>
-    for j in range(height):<br>
+for j in range(height):<br>
         
-        # getting the RGB pixel value.<br>
-        r, g, b = input_image.getpixel((i, j))<br>
+ getting the RGB pixel value.<br>
+ r, g, b = input_image.getpixel((i, j))<br>
           
-        # Apply formula of grayscale:<br>
-        grayscale = (0.299*r + 0.587*g + 0.114*b)<br>
+Apply formula of grayscale:<br>
+grayscale = (0.299*r + 0.587*g + 0.114*b)<br>
   
-        # setting the pixel value.<br>
-        pixel_map[i, j] = (int(grayscale), int(grayscale), int(grayscale))<br>
+setting the pixel value.<br>
+pixel_map[i, j] = (int(grayscale), int(grayscale), int(grayscale))<br>
   
-# Saving the final output<br>
-# as "grayscale.png":<br>
-#input_image.save("grayscale", format="png")<br>
+Saving the final output<br>
+as "grayscale.png":<br>
+input_image.save("grayscale", format="png")<br>
 plt.imshow(input_image)<br>
 plt.show()   <br> 
-# use input_image.show() to see the image on the<br>
+ use input_image.show() to see the image on the<br>
 # output screen.<br>
 
 ![image](https://user-images.githubusercontent.com/99865138/180202299-61bf4dd2-373f-4dda-b2e9-f105d2f39d0b.png)<br>
@@ -825,28 +825,28 @@ for i in range(width):<br><br>
             # RGB value of orange.<br><br>
             pixel_map[i, j] = (255, 165, 255)<br><br>
   
-        # the following else part will fill the<br><br>
-        # rest part with color light salmon.<br><br>
-        else:<br><br>
+ the following else part will fill the<br><br>
+rest part with color light salmon.<br><br>
+else:<br><br>
             
-            # RGB value of light salmon.<br><br>
-            pixel_map[i, j] = (255, 160, 122)<br><br>
+RGB value of light salmon.<br><br>
+pixel_map[i, j] = (255, 160, 122)<br><br>
   
-# The following loop will create a cross<br><br>
-# of color blue.<br><br>
+The following loop will create a cross<br><br>
+of color blue.<br><br>
 for i in range(width):<br><br>
     
-    # RGB value of Blue.<br><br>
-    pixel_map[i, i] = (255, 0, 255)<br><br>
-    pixel_map[i, width-i-1] = (0, 255, 255)<br><br>
+RGB value of Blue.<br><br>
+pixel_map[i, i] = (255, 0, 255)<br><br>
+pixel_map[i, width-i-1] = (0, 255, 255)<br><br>
   
-# Saving the final output<br><br>
-# as "output.png":<br><br>
+Saving the final output<br><br>
+as "output.png":<br><br>
 #input_image.save("output", format="png")<br>
 plt.imshow(input_image)<br>
 plt.show() <br> 
-# use input_image.show() to see the image on the<br>
-# output screen.<br>
+use input_image.show() to see the image on the<br>
+output screen.<br>
 ![image](https://user-images.githubusercontent.com/99865138/180202373-8aa623ed-e380-4321-a757-fbdc4d6f2d7c.png)<br>
 <br>
 import numpy as np<br>
@@ -855,14 +855,14 @@ imgsize=(650,650)<br>
 image = Image.new('RGBA', imgsize)<br>
 innerColor = [153,0,0]<br>
 for y in range(imgsize[1]):<br>
-    for x in range(imgsize[0]):<br>
-         distanceToCenter =np.sqrt((x - imgsize[0]/2) ** 2 + (y - imgsize[1]/2) ** 2)<br>
-         distanceToCenter = (distanceToCenter) / (np.sqrt(2) * imgsize[0]/2)<br>
-         r = distanceToCenter + innerColor[0] * (1 - distanceToCenter)<br>
-         g =  distanceToCenter + innerColor[1] * (1 - distanceToCenter)<br>
-         b =  distanceToCenter + innerColor[2] * (1 - distanceToCenter)<br>
-         image.putpixel((x, y), (int(r), int(g), int(b)))
-        <br>
+ for x in range(imgsize[0]):<br>
+distanceToCenter =np.sqrt((x - imgsize[0]/2) ** 2 + (y - imgsize[1]/2) ** 2)<br>
+distanceToCenter = (distanceToCenter) / (np.sqrt(2) * imgsize[0]/2)<br>
+r = distanceToCenter + innerColor[0] * (1 - distanceToCenter)<br>
+g =  distanceToCenter + innerColor[1] * (1 - distanceToCenter)<br>
+b =  distanceToCenter + innerColor[2] * (1 - distanceToCenter)<br>
+image.putpixel((x, y), (int(r), int(g), int(b)))<br>
+        
 plt.imshow(image)<br>
 plt.show()  <br>
 
@@ -874,13 +874,13 @@ imgsize=(650,650)<br>
 image = Image.new('RGBA', imgsize)<br>
 innerColor = [153,0,0]<br>
 for y in range(imgsize[1]):<br>
-    for x in range(imgsize[0]):<br>
-         distanceToCenter =np.sqrt((x - imgsize[0]/2) ** 2 + (y - imgsize[1]/2) ** 2)<br>
-         distanceToCenter = (distanceToCenter) / (np.sqrt(2) * imgsize[0]/2)<br>
-         r = distanceToCenter + innerColor[0] * (1 - distanceToCenter)<br>
-         g =  distanceToCenter + innerColor[1] * (1 - distanceToCenter)<br>
-         b =  distanceToCenter + innerColor[2] * (1 - distanceToCenter)<br>
-         image.putpixel((x, y), (int(r), int(g), int(b)))<br>
+for x in range(imgsize[0]):<br>
+distanceToCenter =np.sqrt((x - imgsize[0]/2) ** 2 + (y - imgsize[1]/2) ** 2)<br>
+distanceToCenter = (distanceToCenter) / (np.sqrt(2) * imgsize[0]/2)<br>
+r = distanceToCenter + innerColor[0] * (1 - distanceToCenter)<br>
+g =  distanceToCenter + innerColor[1] * (1 - distanceToCenter)<br>
+b =  distanceToCenter + innerColor[2] * (1 - distanceToCenter)<br>
+image.putpixel((x, y), (int(r), int(g), int(b)))<br>
         
 plt.imshow(image)<br>
 plt.show()  <br>
@@ -912,7 +912,7 @@ w, h = 512,512<br>
 data = np.zeros((h, w, 3), dtype=np.uint8)<br>
 data[0:256, 0:256] = [255, 0, 0] <br>
 data[256:300,256:300] = [120,200,255] <br>
-# red patch in upper left<br>
+red patch in upper left<br>
 img = Image.fromarray(data, 'RGB')<br>
 #img.save('my.png')<br>
 #img.show()<br>
