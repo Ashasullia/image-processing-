@@ -918,5 +918,56 @@ img = Image.fromarray(data, 'RGB')<br>
 #img.show()<br>
 plt.imshow(img)<br>
 plt.show()<br> <br>
-![image](https://user-images.githubusercontent.com/99865138/180202088-5e6410c8-7019-44d9-bd9d-5008d8c0e258.png)<br>
+![image](https://user-images.githubusercontent.com/99865138/180202088-5e6410c8-7019-44d9-bd9d-5008d8c0e258.png) <br>
+************************************************************************************************* <br>
+ <br>
+import imageio
+import numpy as np <br>
+import matplotlib.pyplot as plt <br>
+img=imageio.imread('a1.jpg' ) <br>
+plt.imshow(img) <br>
+plt.show() <br>
+max_channels = np.amax([np.amax(img[:,:,0]), np.amax(img[:,:,1]),np.amax(img[:,:,2])]) <br>
+
+print(max_channels) <br>
+
+![image](https://user-images.githubusercontent.com/99865138/181229740-ff083dca-db59-4edc-81d6-86df0cd6725b.png) <br>
+![image](https://user-images.githubusercontent.com/99865138/181230371-e6ac4958-6a99-40ac-97fe-e9393adb060e.png) <br>
+
+import imageio <br>
+import numpy as np <br>
+import matplotlib.pyplot as plt <br>
+img=imageio.imread('a1.jpg') <br>
+plt.imshow(img) <br>
+plt.show() <br>
+min_channels = np.amin([np.amin(img[:,:,0]), np.amin(img[:,:,1]), np.amin(img[:,:,2])]) <br>
+
+print(min_channels) <br>
+
+![image](https://user-images.githubusercontent.com/99865138/181229837-072a545c-f416-4ab0-8ef9-83508e54f633.png) <br>
+![image](https://user-images.githubusercontent.com/99865138/181230432-832c4759-e1c8-45f1-a237-166c38857377.png) <br>
+
+import cv2 <br>
+img=cv2.imread("a1.jpg",0) <br>
+img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB) <br>
+plt.imshow(img) <br>
+np.average(img) <br>
+
+
+![image](https://user-images.githubusercontent.com/99865138/181229893-6466e627-b7d5-46ca-8f67-4aa4a863f9ab.png) <br>
+![image](https://user-images.githubusercontent.com/99865138/181230517-d03355e3-8390-416d-a91d-01a6043889da.png) <br>
+
+from PIL import Image,ImageStat <br>
+import matplotlib.pyplot as plt <br>
+im=Image.open('a1.jpg')
+plt.imshow(im) <br>
+plt.show() <br>
+stat=ImageStat.Stat(im) <br>
+print(stat.stddev) <br>
+
+![image](https://user-images.githubusercontent.com/99865138/181229982-f32251d0-b83c-4a32-98ca-4e25abdc9154.png) <br>
+![image](https://user-images.githubusercontent.com/99865138/181230620-564b02b5-9186-4c46-bf86-1604e46adeba.png) <br>
+
+
+
 
