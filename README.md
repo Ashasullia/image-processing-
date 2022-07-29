@@ -542,9 +542,9 @@ c) Gamma correction<br>
 %matplotlib inline <br>
 import imageio<br>
 import matplotlib.pyplot as plt<br>
-#import warnings<br>
+import warnings<br>
 import matplotlib.cbook<br>
-#warnings.filterwarnings("ignore",category=matplotlib.cbook.mplDeprecation)<br>
+warnings.filterwarnings("ignore",category=matplotlib.cbook.mplDeprecation)<br>
 pic=imageio.imread('b1.jpg')<br>
 plt.figure(figsize=(6,6))<br>
 plt.imshow(pic);<br>
@@ -793,26 +793,25 @@ input_image.save("grayscale", format="png")<br>
 plt.imshow(input_image)<br>
 plt.show()   <br> 
  use input_image.show() to see the image on the<br>
-# output screen.<br>
+output screen.<br>
 
 ![image](https://user-images.githubusercontent.com/99865138/180202299-61bf4dd2-373f-4dda-b2e9-f105d2f39d0b.png)<br>
 <br>
 from PIL import Image<br>
 from PIL import Image<br>
 import matplotlib.pyplot as plt<br>  <br>
-# Create an image as input:<br>
+Create an image as input:<br>
 input_image = Image.new(mode="RGB", size=(400, 400),<br>
                         color="blue")<br>
   
-# save the image as "input.png"<br>
-#(not mandatory)<br>
-#input_image.save("input", format="png")<br>
+ save the image as "input.png"<br>
+(not mandatory)<br>
+input_image.save("input", format="png")<br>
   
-# Extracting pixel map:<br><br>
+ Extracting pixel map:<br><br>
 pixel_map = input_image.load()<br><br>
-  
-# Extracting the width and height<br><br>
-# of the image:<br><br>
+   Extracting the width and height<br><br>
+ of the image:<br><br>
 width, height = input_image.size<br><br>
 z = 100<br><br>
 for i in range(width):<br><br>
