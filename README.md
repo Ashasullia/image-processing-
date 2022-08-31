@@ -994,8 +994,8 @@ BASIC PILLOW FUNCTION <br>
      greyscale<br>
 </br>
 </br>
-   ![Uploading image.png…]()<br>
-   ![Uploading image.png…]()
+   ![image](https://user-images.githubusercontent.com/99865138/187696647-dd3b4ffe-f202-4407-a073-a2e1f838cac1.png)<br>
+   ![image](https://user-images.githubusercontent.com/99865138/187696869-26062437-55b2-4110-9d25-80739d36306e.png)
    ![Uploading image.png…]()<br>
   
   </br>
@@ -1027,6 +1027,7 @@ BASIC PILLOW FUNCTION <br>
 <br>
    filled_edge=ImageChops.darker(bg_red,edge)<br>
    filled_edge<br>
+   
 
    ![Uploading image.png…]()<br>
    edge.save('processed.png')<br>
