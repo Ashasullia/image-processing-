@@ -966,71 +966,70 @@ print(stat.stddev) <br>
 
 ![image](https://user-images.githubusercontent.com/99865138/181229982-f32251d0-b83c-4a32-98ca-4e25abdc9154.png) <br>
 ![image](https://user-images.githubusercontent.com/99865138/181230620-564b02b5-9186-4c46-bf86-1604e46adeba.png) <br>
-*************************************************************************************************************************
-BASIC PILLOW FUNCTION 
+*************************************************************************************************************************<br>
+BASIC PILLOW FUNCTION <br>
 
-</br>
-</br>
+
      from PIL import Image,ImageChops,ImageFilter
-     from matplotlib import pyplot as plt
-     #create PIL a image object
-     x=Image.open("oxx.png")
+     from matplotlib import pyplot as plt<br>
+     #create PIL a image object<br>
+     x=Image.open("oxx.png")<br>
      o=Image.open("oxo.png")
-     #find out attributes if image objects
-     print('size of the image:',x.size,'color mode:',x.mode)
-     print('size of the image:',o.size,'color mode:',o.mode)
-     #plot 2 imageone besides the other
-     plt.subplot(121),
-     plt.imshow(o)
-     plt.axis('off')
-     plt.subplot(122),
+     #find out attributes if image objects<br>
+     print('size of the image:',x.size,'color mode:',x.mode)<br>
+     print('size of the image:',o.size,'color mode:',o.mode)<br>
+     #plot 2 imageone besides the other<br>
+     plt.subplot(121),<br>
+     plt.imshow(o)<br>
+     plt.axis('off')<br>
+     plt.subplot(122),<br>
      plt.imshow(x)
-     plt.axis('off')
-     #multiply images
-     merged=ImageChops.multiply(o,x)
-     #adding 2 images
+     plt.axis('off')<br>
+     #multiply images<br>
+     merged=ImageChops.multiply(o,x)<br>
+     #adding 2 images<br>
      add=ImageChops.add(o,x)
-     #convert color mode
-     greyscale=merged.convert('L')
-     greyscale
+     #convert color mode<br>
+     greyscale=merged.convert('L')<br>
+     greyscale<br>
 </br>
 </br>
+   ![Uploading image.png…]()<br>
    ![Uploading image.png…]()
-   ![Uploading image.png…]()
-   ![Uploading image.png…]()
+   ![Uploading image.png…]()<br>
   
   </br>
   </br>
 
     #mapping the pixels of the iamge so we can use them as coordinates
-    pixel=greyscale.load()
-    #a nested loop to parse through all the pixels in the image
+    pixel=greyscale.load()<br>
+    #a nested loop to parse through all the pixels in the image<br>
     for row in range(greyscale.size[0]):
-        for column in range(greyscale.size[1]):
+        for column in range(greyscale.size[1]):<br>
             if pixel[row,column]!=(255):
-                pixel[row,column]=(0)
-    greyscale
+                pixel[row,column]=(0)<br>
+    greyscale<br>
 
     ![Uploading image.png…]()
-    ![Uploading image.png…]()
+    ![Uploading image.png…]()<br>
 
 
-    blur=greyscale.filter(ImageFilter.GaussianBlur(radius=1))
+    blur=greyscale.filter(ImageFilter.GaussianBlur(radius=1))<br>
 
-    edge=blur.filter(ImageFilter.FIND_EDGES)
-    edge
+    edge=blur.filter(ImageFilter.FIND_EDGES)<br>
+    edge<br>
 </br>
 </br>
 ![Uploading image.png…]()</br>
 
    edge=edge.convert('RGB')
-   bg_red=Image.new('RGB',(256,256),color=(256,0,0))
+   bg_red=Image.new('RGB',(256,256),color=(256,0,0))<br>
+<br>
+   filled_edge=ImageChops.darker(bg_red,edge)<br>
+   filled_edge<br>
 
-   filled_edge=ImageChops.darker(bg_red,edge)
-   filled_edge
-
-   ![Uploading image.png…]()
-   edge.save('processed.png')
+   ![Uploading image.png…]()<br>
+   edge.save('processed.png')<br>
 
 </br>
 </br>
