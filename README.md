@@ -996,7 +996,7 @@ BASIC PILLOW FUNCTION <br>
 </br>
    ![image](https://user-images.githubusercontent.com/99865138/187696647-dd3b4ffe-f202-4407-a073-a2e1f838cac1.png)<br>
    ![image](https://user-images.githubusercontent.com/99865138/187696869-26062437-55b2-4110-9d25-80739d36306e.png)
-   ![Uploading image.png…]()<br>
+   ![image](https://user-images.githubusercontent.com/99865138/187877724-93a28377-ddb0-4f6c-b80b-ca6b87989177.png)<br>
   
   </br>
   </br>
@@ -1010,8 +1010,8 @@ BASIC PILLOW FUNCTION <br>
                 pixel[row,column]=(0)<br>
     greyscale<br>
 
-    ![Uploading image.png…]()
-    ![Uploading image.png…]()<br>
+    ![image](https://user-images.githubusercontent.com/99865138/187877824-7b3680d1-040c-46a0-9216-67c03d720bfd.png)
+    ![image](https://user-images.githubusercontent.com/99865138/187878787-09daad58-5d47-4ce9-a3d8-f1efa7e34624.png)<br>
 
 
     blur=greyscale.filter(ImageFilter.GaussianBlur(radius=1))<br>
@@ -1055,7 +1055,10 @@ dst=imageio.inpaint(img,mask,3,imageio.INPAINT_TELEA)
 cv2.imwrite("dimage_inpainted.png",dst)
 plt.imshow(dst)
 plt.show()
+![Uploading image.png…]()
 
+
+removes logo<br>
 
 import numpy as np
 import matplotlib.pyplot as plt
