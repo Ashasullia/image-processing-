@@ -1039,159 +1039,174 @@ BASIC PILLOW FUNCTION <br>
 
 
 *******************************************************************************************************************************************
-import numpy as np
-import imageio
-import matplotlib.pyplot as plt
-img=imageio.imread("xox.png")
-plt.imshow(img)
-plt.show()
+ image restoration <br>
+  </br>
+   </br>
+      import numpy as np
+      import imageio
+      import matplotlib.pyplot as plt
+      img=imageio.imread("xox.png")
+      plt.imshow(img)
+      plt.show()
 
-mask=imageio.imread("xox.png",0)
-plt.imshow(mask)
-plt.show()
+      mask=imageio.imread("xox.png",0)
+      plt.imshow(mask)
+      plt.show()
 
-dst=imageio.inpaint(img,mask,3,imageio.INPAINT_TELEA)
+      dst=imageio.inpaint(img,mask,3,imageio.INPAINT_TELEA)
 
-cv2.imwrite("dimage_inpainted.png",dst)
-plt.imshow(dst)
-plt.show()
-![Uploading image.png…]()
-
+      cv2.imwrite("dimage_inpainted.png",dst)
+      plt.imshow(dst)
+      plt.show()
+   </br>   
+ </br>
+ 
 
 removes logo<br>
 
-import numpy as np
-import matplotlib.pyplot as plt
-import pandas as pd
-plt.rcParams['figure.figsize']=(10,8)
+     import numpy as np
+     import matplotlib.pyplot as plt
+     import pandas as pd
+     plt.rcParams['figure.figsize']=(10,8)
 
 
 
-import numpy as np
-import imageio
-import matplotlib.pyplot as plt
-img=imageio.imread("imlogo.jpg")
-plt.imshow(img)
-plt.show()
+     import numpy as np
+     import imageio
+     import matplotlib.pyplot as plt
+     img=imageio.imread("imlogo.jpg")
+     plt.imshow(img)
+     plt.show()
 
-mask=imageio.imread("imlogo.jpg",0)
-plt.imshow(mask)
-plt.show()
+     mask=imageio.imread("imlogo.jpg",0)
+     plt.imshow(mask)
+     plt.show()
 
-dst=imageio.inpaint(img,mask,3,imageio.INPAINT_TELEA)
+     dst=imageio.inpaint(img,mask,3,imageio.INPAINT_TELEA)
 
-cv2.imwrite("dimage_inpainted.png",dst)
-plt.imshow(dst)
-plt.show()
-import numpy as np
-import imageio
-import matplotlib.pyplot as plt
-img=imageio.imread("imlogo.jpg")
-plt.imshow(img)
-plt.show()
+     cv2.imwrite("dimage_inpainted.png",dst)
+     plt.imshow(dst)
+     plt.show()
+     import numpy as np
+     import imageio
+     import matplotlib.pyplot as plt
+     img=imageio.imread("imlogo.jpg")
+     plt.imshow(img)
+     plt.show()
 
-mask=imageio.imread("imlogo.jpg",0)
-plt.imshow(mask)
-plt.show()
+     mask=imageio.imread("imlogo.jpg",0)
+     plt.imshow(mask)
+     plt.show()
 
-dst=imageio.inpaint(img,mask,3,imageio.INPAINT_TELEA)
+     dst=imageio.inpaint(img,mask,3,imageio.INPAINT_TELEA)
 
-cv2.imwrite("dimage_inpainted.png",dst)
-plt.imshow(dst)
-plt.show()
+     cv2.imwrite("dimage_inpainted.png",dst)
+     plt.imshow(dst)
+     plt.show()
+ </br>
+ </br>
 
-![Uploading image.png…]()
 
 
-import numpy as np
-import matplotlib.pyplot as plt
-import pandas as pd
-plt.rcParams['figure.figsize']=(10,8)
+removing logo  in the picture <br>
+ </br>
+  </br>
+    import numpy as np
+    import matplotlib.pyplot as plt
+    import pandas as pd
+    plt.rcParams['figure.figsize']=(10,8)
 
-def show_image(image,title='Image',cmap_type='gray'):
-    plt.imshow(image,cmap=cmap_type)
-    plt.title(title)
-    plt.axis('off') 
+    def show_image(image,title='Image',cmap_type='gray'):
+        plt.imshow(image,cmap=cmap_type)
+        plt.title(title)
+        plt.axis('off') 
+
+    def plot_comparison(img_original,img_filtered,img_title_filtered):
+        fig,(ax1,ax2)=plt.subplots(ncols=2,figsize=(10,8),sharex=True,sharey=True)
+        ax1.imshow(img_original,cmap=plt.cm.gray)
+        ax1.set_title('original')
+        ax1.axis('off')
+        ax2.imshow(img_filtered,cmap=plt.cm.gray)
+        ax2.set_title('img_title_filtered')
+        ax2.axis('off')
+
+
+
+    from skimage.restoration import inpaint
+    from skimage.transform import resize
+    from skimage import color
+
+
+    image_with_logo=plt.imread('imlogo.jpg')
+    mask=np.zeros(image_with_logo.shape[:-1])
+    mask[210:272,360:425]=1
+    image_logo_removed=inpaint.inpaint_biharmonic(image_with_logo,mask,multichannel=True)
+    plot_comparison(image_with_logo,image_logo_removed,'Image with logo removed')
+ </br>
+  </br>
+
+romoving the noise <br>
+ </br>
+  </br>
+  from skimage.util import random_noise
+  fruit_image=plt.imread('fruits.jpg')
+  noisy_image=random_noise(fruit_image)
+  plot_comparison(fruit_image,noisy_image,'noisy image')
+ </br>
+  </br>
+  reducing noise<br>
+   from skimage.restoration import denoise_tv_chambolle
+   noisy_image=plt.imread('noisy.jpg')
+   denoised_image=denoise_tv_chambolle(noisy_image,multichannel=True)
+   plot_comparison(noisy_image,denoised_image,'denoised Image')
+ </br>
+  </br>
+reducing noise while presurving the edges<br>
+  </br>
+    </br>
+   from skimage.restoration import denoise_bilateral
+   landscape_image=plt.imread('noisy.jpg')
+   denoised_image=denoise_bilateral(landscape_image,multichannel=True)
+   plot_comparison(landscape_image,denoised_image,'denoised Image')
+  </br>
+    </br>
+    segmentation<br>
+      </br>
+       </br>
+    from skimage.segmentation import slic
+    from skimage.color import label2rgb
+
+    face_image=plt.imread('face.jpg')
+    segment=slic(face_image,n_segments=400)
+
+    segment_image=label2rgb(segments,face_image,kind='avg')
+    plot_comparison(face_image,segmented_image,'segmented image,400 superpixels')
+  </br>
+    </br>
+    contours <br>
+      </br>
+        </br>
+
+  def show_image_counter(image,contours):
+      plt.figure()
+      for n,contour in enumerate(contours):
+          plt.plot(contour[:,1],contour[:,0],linewidth=3)
+      plt.imshow(image,interpolation='nearest',cmap='gray_r')
+      plt.title('Contours')
+      plt.axis('off')
+ 
     
-def plot_comparison(img_original,img_filtered,img_title_filtered):
-    fig,(ax1,ax2)=plt.subplots(ncols=2,figsize=(10,8),sharex=True,sharey=True)
-    ax1.imshow(img_original,cmap=plt.cm.gray)
-    ax1.set_title('original')
-    ax1.axis('off')
-    ax2.imshow(img_filtered,cmap=plt.cm.gray)
-    ax2.set_title('img_title_filtered')
-    ax2.axis('off')
-    
-    
-    
-from skimage.restoration import inpaint
-from skimage.transform import resize
-from skimage import color
+      from skimage import measure,data
+
+     horse_image=data.horse()
+     contour=measure.find_contours(horse_image,level=0.8)
+     show_image_contour(horse_image,contours)
 
 
-image_with_logo=plt.imread('imlogo.jpg')
-mask=np.zeros(image_with_logo.shape[:-1])
-mask[210:272,360:425]=1
-image_logo_removed=inpaint.inpaint_biharmonic(image_with_logo,mask,multichannel=True)
-plot_comparison(image_with_logo,image_logo_removed,'Image with logo removed')
-
-![Uploading image.png…]()
-
-
-
-from skimage.util import random_noise
-fruit_image=plt.imread('fruits.jpg')
-noisy_image=random_noise(fruit_image)
-plot_comparison(fruit_image,noisy_image,'noisy image')
-
-#from skimage.restoration import denoise_tv_chambolle
-#noisy_image=plt.imread('noisy.jpg')
-#denoised_image=denoise_tv_chambolle(noisy_image,multichannel=True)
-#plot_comparison(noisy_image,denoised_image,'denoised Image')
-
-![Uploading Screenshot 2022-08-31 224723.png…]()
-from skimage.restoration import denoise_tv_chambolle
-noisy_image=plt.imread('face.jpg')
-denoised_image=denoise_tv_chambolle(noisy_image,multichannel=True)
-plot_comparison(noisy_image,denoised_image,'denoised Image')
-![Uploading image.png…]()
-
-
-from skimage.restoration import denoise_tv_chambolle
-noisy_image=plt.imread('faceing.jpg')
-denoised_image=denoise_bilateral(landscape_image,multichannel=True)
-plot_comparison(landscape_image,denoised_image,'denoised Image')
-
-
-from skimage.segmentation import slic
-from skimage.color import label2rgb
-
-face_image=plt.imread('face.jpg')
-segment=slic(face_image,n_segments=400)
-
-segment_image=label2rgb(segments,face_image,kind='avg')
-plot_comparison(face_image,segmented_image,'segmented image,400 superpixels')
-
-
-def show_image_counter(image,contours):
-    plt.figure()
-    for n,contour in enumerate(contours):
-        plt.plot(contour[:,1],contour[:,0],linewidth=3)
-    plt.imshow(image,interpolation='nearest',cmap='gray_r')
-    plt.title('Contours')
-    plt.axis('off')
-    
-    
- from skimage import measure,data
-
-horse_image=data.horse()
-contour=measure.find_contours(horse_image,level=0.8)
-show_image_contour(horse_image,contours)
-
-
-shape_contours=[cnt.shape[0] for cnt in contours]
-max_dots_shape=50
-dots_contours=[cnt for cnt in contours if np.shape(cnt)[0]<max_dots_shape]
-show_image_contour(binary,contours)
-print('dices dots number:{}.'.format(len(dots_contours)))
-
+     shape_contours=[cnt.shape[0] for cnt in contours]
+     max_dots_shape=50
+     dots_contours=[cnt for cnt in contours if np.shape(cnt)[0]<max_dots_shape]
+     show_image_contour(binary,contours)
+     print('dices dots number:{}.'.format(len(dots_contours)))
+  </br>
+    </br>
